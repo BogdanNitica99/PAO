@@ -31,4 +31,8 @@ public abstract class Animal {
                 " varsta " + varsta +
                 "}";
     }
+
+    public String getNume() {
+        return nume;
+    }
 }
