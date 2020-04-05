@@ -4,12 +4,14 @@ public class ShoppingCart {
     private int maxCapacity;
     private Car[] cars;
     private int totalCost;
+    private Client client;
 
-    public ShoppingCart() {
+    public ShoppingCart(Client client) {
         this.index = 0;
         this.maxCapacity = 10;
         this.totalCost = 0;
         this.cars = new Car[maxCapacity];
+        this.client = client;
     }
 
     public int getTotalCost() {
@@ -18,6 +20,10 @@ public class ShoppingCart {
 
     public int getIndex() {
         return index;
+    }
+
+    public Client getClient(){
+        return client;
     }
 
     public void addCar(Car car) {

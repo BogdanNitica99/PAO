@@ -7,13 +7,17 @@ public class Receipt {
     private int totalCost;
     private Car[] objectsBought;
     private int totalObjects;
+    private Client client;
+    private int discount;
 
-    public Receipt(String releasedDate, int nrReceipt, int totalCost, Car[] objectsBought, int totalObjects) {
+    public Receipt(String releasedDate, int nrReceipt, int totalCost, Car[] objectsBought, int totalObjects, Client client, int discount) {
         this.releasedDate = releasedDate;
         this.nrReceipt = nrReceipt;
         this.totalCost = totalCost;
         this.objectsBought = objectsBought;
         this.totalObjects = totalObjects;
+        this.client = client;
+        this.discount = discount;
     }
 
     @Override
@@ -24,6 +28,8 @@ public class Receipt {
                 ", totalCost=" + totalCost +
                 ", objectsBought=" + Arrays.toString(objectsBought) +
                 ", totalObjects=" + totalObjects +
+                ", client=" + client.toString() +
+                ", discount=" + discount +
                 '}';
     }
 }

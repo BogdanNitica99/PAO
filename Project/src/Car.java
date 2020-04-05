@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Car {
+public class Car implements Comparable<Car>{
 
     private CarModel model;
     private int cost;
@@ -16,6 +16,14 @@ public class Car {
 
     public int getCost() {
         return this.cost;
+    }
+
+    @Override
+    public int compareTo(Car o) {
+        if(this.cost != o.getCost()){
+            return this.cost - o.getCost();
+        }
+        return 0;
     }
 
     @Override

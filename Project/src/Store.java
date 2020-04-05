@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Store {
 
     private Car[] cars;
@@ -19,6 +22,10 @@ public class Store {
 
             index += 1;
         }
+    }
+
+    public void sortCars() {
+        Arrays.sort(this.cars);
     }
 
     public Car[] listStoreCars() {
