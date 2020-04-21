@@ -1,7 +1,10 @@
+package client;
+
+import client.Client;
+
 public class LegalEntity extends Client {
 
     private String companyName;
-    private int discount;
 
     public LegalEntity(String name, int money, int nrOfCars, String companyName) {
         super(name, money, nrOfCars);
@@ -12,14 +15,11 @@ public class LegalEntity extends Client {
     public int getDiscount() {
         int nrOfCars = getNrOfCars();
         if(nrOfCars > 10){
-            this.discount = 10;
+            return 10;
         }
         else if(nrOfCars > 20){
-            this.discount = 15;
+            return 15;
         }
-        else {
-            this.discount = 0;
-        }
-        return this.discount;
+        return 0;
     }
 }

@@ -1,9 +1,10 @@
-public class Client {
+package client;
+
+public abstract class Client {
 
     private String name;
     private int money;
     private int nrOfCars;
-    private int discount;
 
     public Client(String name, int money, int nrOfCars) {
         this.name = name;
@@ -23,13 +24,11 @@ public class Client {
         this.money = money;
     }
 
-    public int getDiscount() {
-        return discount;
-    }
+    public abstract int getDiscount();
 
     @Override
     public String toString() {
-        return "Client{" +
+        return "client{" +
                 "name='" + name + '\'' +
                 '}';
     }

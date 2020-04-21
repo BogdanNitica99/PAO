@@ -1,3 +1,5 @@
+import client.Client;
+
 import java.util.Arrays;
 
 public class Receipt {

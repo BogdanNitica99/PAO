@@ -1,3 +1,5 @@
+import client.Client;
+
 public class ShoppingCart {
 
     private int index;
@@ -28,7 +30,8 @@ public class ShoppingCart {
 
     public void addCar(Car car) {
         if(index == maxCapacity) {
-            throw new RuntimeException("Your shopping cart is full!");
+            //throw new RuntimeException("Your shopping cart is full!");
+            System.out.println("Your shopping cart is full!");
         }
         else {
             cars[index] = car;
@@ -45,12 +48,15 @@ public class ShoppingCart {
 
     public void delete(int index) {
         if(index < 0 || index > maxCapacity) {
-            throw new RuntimeException("The number must be a positive integer in the range [0, size)");
+            //throw new RuntimeException("The number must be a positive integer in the range [0, size)");
+            System.out.println("The number must be a positive integer in the range [0, size)");
         }
+        else {
 
-        if (maxCapacity - 1 - index >= 0)
-            System.arraycopy(cars, index + 1, cars, index, maxCapacity - 1 - index);
+            if (maxCapacity - 1 - index >= 0)
+                System.arraycopy(cars, index + 1, cars, index, maxCapacity - 1 - index);
 
-        maxCapacity -= 1;
+            maxCapacity -= 1;
+        }
     }
 }

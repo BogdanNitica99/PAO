@@ -1,4 +1,6 @@
-import java.util.StringJoiner;
+import client.Client;
+import client.Individual;
+import client.LegalEntity;
 
 public class Service {
 
@@ -56,7 +58,12 @@ public class Service {
         client2Cart.addCar(cars[0]);
         buyCart(bucharestStore, client2Cart);
 
-        Review reviewClient2 = new Review(cars[0], client2,5,"Too expensive");
+        try {
+            Review reviewClient2 = new Review(cars[0], client2, 5, "Too expensive");
+        }
+        catch (RuntimeException e){
+            System.out.println(e);
+        }
 
     }
 

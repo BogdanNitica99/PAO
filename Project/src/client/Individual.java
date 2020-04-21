@@ -1,3 +1,7 @@
+package client;
+
+import client.Client;
+
 public class Individual extends Client {
 
     private Boolean loyalCustomer;

@@ -1,3 +1,5 @@
+import client.Client;
+
 public class Review {
 
     private Car car;
