@@ -4,10 +4,21 @@ import java.io.*;
 
 import car.Car;
 import car.CarModel;
+import client.Client;
+import client.Individual;
+import client.LegalEntity;
 
 public class ReadCSV {
 
     private static final String BASE_PATH = "./src/io/files/";
+
+    private static ReadCSV single_instance = null;
+
+    public static ReadCSV getInstance() {
+        if (single_instance == null)
+            single_instance = new ReadCSV();
+        return single_instance;
+    }
 
     public int getNumberOfLines(String fileName) {
         int lines = 0;
@@ -18,6 +29,41 @@ public class ReadCSV {
             e.printStackTrace();
         }
         return lines;
+    }
+
+    public Client[] readClient() {
+        int index = 0;
+
+        Client[] clients = new Client[0];
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(BASE_PATH + "client.csv"));) {
+            int size = getNumberOfLines("client.csv");
+            clients = new Client[size];
+
+            String line;
+            while((line = bufferedReader.readLine()) != null) {
+                String[] words = line.split("[,.:'!?]+");
+
+                String name = words[0];
+                int money = Integer.parseInt(words[1]);
+                int nrOfCars = Integer.parseInt(words[2]);
+                String companyName = words[3];
+
+                Client client;
+                if(companyName.equals("null")) {
+                    client = new Individual(name, money, nrOfCars);
+                }
+                else {
+                    client = new LegalEntity(name, money, nrOfCars, companyName);
+                }
+                clients[index] = client;
+                index += 1;
+            }
+        }
+        catch(IOException e) {
+            e.printStackTrace();
+        }
+        return clients;
     }
 
     public Car[] readCar() {
