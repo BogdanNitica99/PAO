@@ -1,3 +1,5 @@
+package car;
+
 import java.util.Objects;
 
 public class Car implements Comparable<Car>{
@@ -44,7 +46,7 @@ public class Car implements Comparable<Car>{
 
     @Override
     public String toString() {
-        return "Car{" +
+        return "car.Car{" +
                 "model=" + model.toString() +
                 ", cost=" + cost +
                 ", horsepower=" + horsepower +

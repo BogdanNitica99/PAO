@@ -11,13 +11,13 @@ After they decide on which cars they want to buy, if they have enough money the 
 ## Structure
 
 This project contains the following classes:
-* Car - contains `CarModel`, and other details about a car. It has overrided the `equals` method for checking if a car is or not in store;
-* CarModel - contains String name and model. This Class was implemented so there are no duplicates cars in the database. (Ie. There can be multiple Audi A4 with multiples color, or horsepower.);
+* car.Car - contains `car.CarModel`, and other details about a car. It has overrided the `equals` method for checking if a car is or not in store;
+* car.CarModel - contains String name and model. This Class was implemented so there are no duplicates cars in the database. (Ie. There can be multiple Audi A4 with multiples color, or horsepower.);
 * client - Contains details about the client in general;
     * client.Individual - it extends the `client` class to calculate the Discount in a different way;
     * client.LegalEntity - it extends the `client` class to calculate the Discount in a different way;
 * Receipt - contains a container with all the objects needed for a receipt and an Override `toString` method;
-* Review - contains a container with an object `Car`, an Object `client`, an integer for the number of stars, and a String for the actual review;
+* Review - contains a container with an object `car.Car`, an Object `client`, an integer for the number of stars, and a String for the actual review;
 * ShoppingCart - contains an `Array of Cars` that the client added to the `Cart`;
 * Store - contains an `Array of Cars` that are in the `Store` sorting them by the cost;
 * Service - contains all the action. Here are added the cars to the stores, are defined clients and shoping carts, from here you can add, remove to and from the `Store` and `Cart`. You can leave reviews for the cars or you can buy the cars in the shopping cart;

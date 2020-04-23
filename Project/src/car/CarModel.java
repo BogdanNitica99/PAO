@@ -1,3 +1,5 @@
+package car;
+
 import java.util.Objects;
 
 public class CarModel {
@@ -29,7 +31,7 @@ public class CarModel {
 
     @Override
     public String toString() {
-        return "CarModel{" +
+        return "car.CarModel{" +
                 "name='" + name + '\'' +
                 ", model='" + model + '\'' +
                 ", type='" + type + '\'' +

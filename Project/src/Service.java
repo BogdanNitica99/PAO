@@ -1,6 +1,9 @@
+import car.Car;
+import car.CarModel;
 import client.Client;
 import client.Individual;
 import client.LegalEntity;
+import io.ReadCSV;
 
 public class Service {
 
@@ -8,6 +11,10 @@ public class Service {
 
         ShoppingService shoppingService = new ShoppingService();
         ClientService clientService = new ClientService();
+        ReadCSV readCSV = new ReadCSV();
+
+        //Read the Cars from the CSV files and returns an Array of Cars
+        Car[] cars = readCSV.readCar();
 
         Client client1 = new Individual("Bogdan",200000,4);
         Client client2 = new Individual("Elon",20000,1);
@@ -19,19 +26,12 @@ public class Service {
         ShoppingCart client2Cart = shoppingService.createShoppingCart(client2);
         ShoppingCart company1Cart = shoppingService.createShoppingCart(company1);
 
-        CarModel dacia = new CarModel("Dacia", "Logan", "Sedan");
-        CarModel audi = new CarModel("Audi","A4","Sedan");
-        CarModel tesla = new CarModel("Tesla","Model S","Sedan");
-
-        Car daciaWhite = new Car(dacia,7000,99,"White");
-        Car teslaRed = new Car(tesla,90000,300,"Red");
-        Car teslaBlue = new Car(tesla,90000,300,"Blue");
-        Car audiBlack = new Car(audi, 30000, 190, "Black");
-
-        shoppingService.addCarToStore(bucharestStore, daciaWhite);
-        shoppingService.addCarToStore(bucharestStore, teslaRed);
-        shoppingService.addCarToStore(bucharestStore, teslaBlue);
-        shoppingService.addCarToStore(bucharestStore, audiBlack);
+        shoppingService.addCarToStore(bucharestStore, cars[0]);
+        shoppingService.addCarToStore(bucharestStore, cars[1]);
+        shoppingService.addCarToStore(bucharestStore, cars[2]);
+        shoppingService.addCarToStore(bucharestStore, cars[3]);
+        shoppingService.addCarToStore(bucharestStore, cars[4]);
+        shoppingService.addCarToStore(bucharestStore, cars[5]);
 
         shoppingService.showCarsInStore(bucharestStore);
 
