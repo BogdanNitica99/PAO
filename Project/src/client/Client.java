@@ -32,4 +32,8 @@ public abstract class Client {
                 "name='" + name + '\'' +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
 }

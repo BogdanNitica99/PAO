@@ -1,12 +1,18 @@
 import car.Car;
 import client.Client;
+import io.LogCSV;
 import services.Receipt;
 import services.Review;
 
 public class ClientService {
 
+    LogCSV logCSV = new LogCSV();
+
     public Review giveReview(Car car, Client client, int stars, String feedback) {
         Review review = new Review(car, client, stars, feedback);
+
+        logCSV.writeLog(client.getName() + " left a review for car");
+
         return review;
     }
 
@@ -50,6 +56,9 @@ public class ClientService {
 
         System.out.println("Your receipt: ");
         System.out.println(receipt.toString());
+
+        logCSV.writeLog(client.getName() + " bought his Shopping Cart");
+        logCSV.writeLog(client.getName() + " got a receipt costing " + carCosts);
 
         return receipt;
     }
