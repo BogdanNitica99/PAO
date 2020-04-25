@@ -1,15 +1,18 @@
 import car.Car;
-import car.CarModel;
 import client.Client;
-import client.Individual;
-import client.LegalEntity;
 import io.ReadCSV;
+import io.WriteCSV;
+import services.Receipt;
+import services.Review;
+
+import java.io.IOException;
 
 public class Service {
 
     public static void main(String[] args) {
 
         ReadCSV readCSV = new ReadCSV();
+        WriteCSV writeCSV = new WriteCSV();
 
         ShoppingService shoppingService = new ShoppingService();
         ClientService clientService = new ClientService();
@@ -41,18 +44,27 @@ public class Service {
         //Print all the Cars in the Shopping Cart for Client1
         shoppingService.showCarsInCart(client1Cart);
 
-        clientService.buyCart(bucharestStore, client1Cart);
+        Receipt receiptClient1 = clientService.buyCart(bucharestStore, client1Cart);
 
         shoppingService.showCarsInStore(bucharestStore);
 
         shoppingService.addCarToShoppingCart(client2Cart, shoppingService.getCarFromStore(bucharestStore, 0)); //dubios, nu vrea sa mearga pentru index 2
 
-        clientService.buyCart(bucharestStore, client2Cart);
+        Receipt receiptClient2 = clientService.buyCart(bucharestStore, client2Cart);
 
         try {
             Review reviewClient2 = clientService.giveReview(shoppingService.getCarFromStore(bucharestStore, 0), clients[1], 5, "Too expensive");
+            writeCSV.writeReview(reviewClient2);
         }
-        catch (RuntimeException e){
+        catch (RuntimeException | IOException e){
+            System.out.println(e);
+        }
+
+        try {
+            writeCSV.writeReceipt(receiptClient1);
+            writeCSV.writeReceipt(receiptClient2);
+        }
+        catch (IOException e) {
             System.out.println(e);
         }
 

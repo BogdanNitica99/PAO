@@ -1,5 +1,7 @@
 import car.Car;
 import client.Client;
+import services.Receipt;
+import services.Review;
 
 public class ClientService {
 
@@ -8,7 +10,7 @@ public class ClientService {
         return review;
     }
 
-    public void buyCart(Store store, ShoppingCart cart) {
+    public Receipt buyCart(Store store, ShoppingCart cart) {
         Car[] carsInCart = cart.listShoppingCart();
         Client client = cart.getClient();
         int clientMoney = client.getMoney();
@@ -25,7 +27,7 @@ public class ClientService {
         }
         else {
             System.out.println("You don't have enough money!");
-            return;
+            return null;
         }
 
         Receipt receipt;
@@ -44,10 +46,12 @@ public class ClientService {
             store.delete(index);
         }
 
-        receipt = new Receipt("20 Mar", 5,carCosts,carsBought,numberOfCars,client,clientDiscount);
+        receipt = new Receipt(5,carCosts,carsBought,numberOfCars,client,clientDiscount);
 
         System.out.println("Your receipt: ");
         System.out.println(receipt.toString());
+
+        return receipt;
     }
 
 }

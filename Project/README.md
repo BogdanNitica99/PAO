@@ -16,8 +16,8 @@ This project contains the following classes:
 * client - Contains details about the client in general;
     * client.Individual - it extends the `client` class to calculate the Discount in a different way;
     * client.LegalEntity - it extends the `client` class to calculate the Discount in a different way;
-* Receipt - contains a container with all the objects needed for a receipt and an Override `toString` method;
-* Review - contains a container with an object `car.Car`, an Object `client`, an integer for the number of stars, and a String for the actual review;
+* services.Receipt - contains a container with all the objects needed for a receipt and an Override `toString` method;
+* services.Review - contains a container with an object `car.Car`, an Object `client`, an integer for the number of stars, and a String for the actual review;
 * ShoppingCart - contains an `Array of Cars` that the client added to the `Cart`;
 * Store - contains an `Array of Cars` that are in the `Store` sorting them by the cost;
 * Service - contains all the action. Here are added the cars to the stores, are defined clients and shoping carts, from here you can add, remove to and from the `Store` and `Cart`. You can leave reviews for the cars or you can buy the cars in the shopping cart;

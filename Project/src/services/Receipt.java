@@ -1,3 +1,5 @@
+package services;
+
 import car.Car;
 import client.Client;
 
@@ -5,7 +7,6 @@ import java.util.Arrays;
 
 public class Receipt {
 
-    private String releasedDate;
     private int nrReceipt;
     private int totalCost;
     private Car[] objectsBought;
@@ -13,8 +14,7 @@ public class Receipt {
     private Client client;
     private int discount;
 
-    public Receipt(String releasedDate, int nrReceipt, int totalCost, Car[] objectsBought, int totalObjects, Client client, int discount) {
-        this.releasedDate = releasedDate;
+    public Receipt(int nrReceipt, int totalCost, Car[] objectsBought, int totalObjects, Client client, int discount) {
         this.nrReceipt = nrReceipt;
         this.totalCost = totalCost;
         this.objectsBought = objectsBought;
@@ -23,10 +23,33 @@ public class Receipt {
         this.discount = discount;
     }
 
+    public int getNrReceipt() {
+        return nrReceipt;
+    }
+
+    public int getTotalCost() {
+        return totalCost;
+    }
+
+    public Car[] getObjectsBought() {
+        return objectsBought;
+    }
+
+    public int getTotalObjects() {
+        return totalObjects;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public int getDiscount() {
+        return discount;
+    }
+
     @Override
     public String toString() {
-        return "Receipt{" +
-                "releasedDate='" + releasedDate + '\'' +
+        return "services.Receipt{" +
                 ", nrReceipt=" + nrReceipt +
                 ", totalCost=" + totalCost +
                 ", objectsBought=" + Arrays.toString(objectsBought) +

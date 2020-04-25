@@ -46,7 +46,7 @@ public class Car implements Comparable<Car>{
 
     @Override
     public String toString() {
-        return "car.Car{" +
+        return "Car{" +
                 "model=" + model.toString() +
                 ", cost=" + cost +
                 ", horsepower=" + horsepower +

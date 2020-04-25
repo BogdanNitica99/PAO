@@ -1,3 +1,5 @@
+package services;
+
 import car.Car;
 import client.Client;
 
@@ -16,5 +18,21 @@ public class Review {
         this.client = client;
         this.stars = stars;
         this.feedback = feedback;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public int getStars() {
+        return stars;
+    }
+
+    public String getFeedback() {
+        return feedback;
     }
 }
