@@ -49,13 +49,16 @@ public class Receipt {
 
     @Override
     public String toString() {
-        return "services.Receipt{" +
-                ", nrReceipt=" + nrReceipt +
+        return "services.Receipt{ nrReceipt=" + nrReceipt +
                 ", totalCost=" + totalCost +
                 ", objectsBought=" + Arrays.toString(objectsBought) +
                 ", totalObjects=" + totalObjects +
                 ", client=" + client.toString() +
                 ", discount=" + discount +
                 '}';
+    }
+
+    public String writeNice() {
+        return nrReceipt + ", "  + totalCost + ", " + totalObjects + ", " + Arrays.toString(objectsBought) + ", " + client.getName() + ", " + discount;
     }
 }

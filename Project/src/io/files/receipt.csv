@@ -1,11 +1,3 @@
-5,32250,2,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7250, horsepower=99, color='Gray'},Car{model=car.CarModel{name='Audi', model='A4', type='Sedan'}, cost=25000, horsepower=210, color='Black'},2020/04/24 15:52:19,client{name='Bogdan'},0
-5,32250,2,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7250, horsepower=99, color='Gray'},Car{model=car.CarModel{name='Audi', model='A4', type='Sedan'}, cost=25000, horsepower=210, color='Black'},2020/04/24 15:54:02,client{name='Bogdan'},0
-5,7000,1,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7000, horsepower=99, color='White'},2020/04/24 15:54:02,client{name='Elon'},0
-5,32250,2,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7250, horsepower=99, color='Gray'},Car{model=car.CarModel{name='Audi', model='A4', type='Sedan'}, cost=25000, horsepower=210, color='Black'},2020/04/25 12:41:24,client{name='Bogdan'},0
-5,7000,1,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7000, horsepower=99, color='White'},2020/04/25 12:41:24,client{name='Elon'},0
-5,32250,2,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7250, horsepower=99, color='Gray'},Car{model=car.CarModel{name='Audi', model='A4', type='Sedan'}, cost=25000, horsepower=210, color='Black'},2020/04/25 13:15:46,client{name='Bogdan'},0
-5,7000,1,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7000, horsepower=99, color='White'},2020/04/25 13:15:46,client{name='Elon'},0
-5,32250,2,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7250, horsepower=99, color='Gray'},Car{model=car.CarModel{name='Audi', model='A4', type='Sedan'}, cost=25000, horsepower=210, color='Black'},2020/04/25 13:17:42,client{name='Bogdan'},0
-5,7000,1,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7000, horsepower=99, color='White'},2020/04/25 13:17:42,client{name='Elon'},0
-5,32250,2,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7250, horsepower=99, color='Gray'},Car{model=car.CarModel{name='Audi', model='A4', type='Sedan'}, cost=25000, horsepower=210, color='Black'},2020/04/26 12:51:09,client{name='Bogdan'},0
-5,7000,1,Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=7000, horsepower=99, color='White'},2020/04/26 12:51:09,client{name='Elon'},0
+Id,Cost,NoCars,Cars,Date,Client,Discount
+5,32250,2,Dacia Logan Sedan 99 Gray and Audi A4 Sedan 210 Black,2020/04/26 15:27:48,Bogdan,0
+5,25600,1,Audi A4 Sedan 210 White,2020/04/26 15:27:48,Elon,0

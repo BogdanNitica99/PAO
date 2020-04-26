@@ -1,51 +1,26 @@
-
-Created Store with 10 capacity,2020/04/25 13:17:42
-Shopping Cart created for Bogdan,2020/04/25 13:17:42
-Shopping Cart created for Elon,2020/04/25 13:17:42
-Shopping Cart created for Elon,2020/04/25 13:17:42
-Car added to the store,2020/04/25 13:17:42
-Car added to the store,2020/04/25 13:17:42
-Car added to the store,2020/04/25 13:17:42
-Car added to the store,2020/04/25 13:17:42
-Car added to the store,2020/04/25 13:17:42
-Car added to the store,2020/04/25 13:17:42
-Show cars in Store,2020/04/25 13:17:42
-Return car from store,2020/04/25 13:17:42
-Car added to Bogdan,2020/04/25 13:17:42
-Return car from store,2020/04/25 13:17:42
-Car added to Bogdan,2020/04/25 13:17:42
-Show cars in Cart for Bogdan,2020/04/25 13:17:42
-Bogdan bought his Shopping Cart,2020/04/25 13:17:42
-Bogdan got a receipt costing 32250,2020/04/25 13:17:42
-Show cars in Store,2020/04/25 13:17:42
-Return car from store,2020/04/25 13:17:42
-Car added to Elon,2020/04/25 13:17:42
-Elon bought his Shopping Cart,2020/04/25 13:17:42
-Elon got a receipt costing 7000,2020/04/25 13:17:42
-Return car from store,2020/04/25 13:17:42
-Elon left a review for car,2020/04/25 13:17:42
-Created Store with 10 capacity,2020/04/26 12:51:09
-Shopping Cart created for Bogdan,2020/04/26 12:51:09
-Shopping Cart created for Elon,2020/04/26 12:51:09
-Shopping Cart created for Elon,2020/04/26 12:51:09
-Car added to the store,2020/04/26 12:51:09
-Car added to the store,2020/04/26 12:51:09
-Car added to the store,2020/04/26 12:51:09
-Car added to the store,2020/04/26 12:51:09
-Car added to the store,2020/04/26 12:51:09
-Car added to the store,2020/04/26 12:51:09
-Show cars in Store,2020/04/26 12:51:09
-Return car from store,2020/04/26 12:51:09
-Car added to Bogdan,2020/04/26 12:51:09
-Return car from store,2020/04/26 12:51:09
-Car added to Bogdan,2020/04/26 12:51:09
-Show cars in Cart for Bogdan,2020/04/26 12:51:09
-Bogdan bought his Shopping Cart,2020/04/26 12:51:09
-Bogdan got a receipt costing 32250,2020/04/26 12:51:09
-Show cars in Store,2020/04/26 12:51:09
-Return car from store,2020/04/26 12:51:09
-Car added to Elon,2020/04/26 12:51:09
-Elon bought his Shopping Cart,2020/04/26 12:51:09
-Elon got a receipt costing 7000,2020/04/26 12:51:09
-Return car from store,2020/04/26 12:51:09
-Elon left a review for car,2020/04/26 12:51:09
+Action,Timestamp
+Created Store with 10 capacity,2020/04/26 15:27:48
+Shopping Cart created for Bogdan,2020/04/26 15:27:48
+Shopping Cart created for Elon,2020/04/26 15:27:48
+Shopping Cart created for Elon,2020/04/26 15:27:48
+Car added to the store,2020/04/26 15:27:48
+Car added to the store,2020/04/26 15:27:48
+Car added to the store,2020/04/26 15:27:48
+Car added to the store,2020/04/26 15:27:48
+Car added to the store,2020/04/26 15:27:48
+Car added to the store,2020/04/26 15:27:48
+Show cars in Store,2020/04/26 15:27:48
+Return car from store,2020/04/26 15:27:48
+Car added to Bogdan,2020/04/26 15:27:48
+Return car from store,2020/04/26 15:27:48
+Car added to Bogdan,2020/04/26 15:27:48
+Show cars in Cart for Bogdan,2020/04/26 15:27:48
+Bogdan bought his Shopping Cart,2020/04/26 15:27:48
+Bogdan got a receipt costing 32250,2020/04/26 15:27:48
+Show cars in Store,2020/04/26 15:27:48
+Return car from store,2020/04/26 15:27:48
+Car added to Elon,2020/04/26 15:27:48
+Elon bought his Shopping Cart,2020/04/26 15:27:48
+Elon got a receipt costing 25600,2020/04/26 15:27:48
+Return car from store,2020/04/26 15:27:48
+Elon left a review for car,2020/04/26 15:27:48

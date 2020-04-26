@@ -53,4 +53,8 @@ public class Car implements Comparable<Car>{
                 ", color='" + color + '\'' +
                 '}';
     }
+
+    public String writeToCSV() {
+        return model.writeToCSV() + ' ' + horsepower + ' ' + color;
+    }
 }

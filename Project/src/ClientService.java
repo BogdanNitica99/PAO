@@ -55,7 +55,7 @@ public class ClientService {
         receipt = new Receipt(5,carCosts,carsBought,numberOfCars,client,clientDiscount);
 
         System.out.println("Your receipt: ");
-        System.out.println(receipt.toString());
+        System.out.println(receipt.writeNice());
 
         logCSV.writeLog(client.getName() + " bought his Shopping Cart");
         logCSV.writeLog(client.getName() + " got a receipt costing " + carCosts);

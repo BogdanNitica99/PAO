@@ -28,7 +28,7 @@ public class ReadCSV {
         catch (IOException e) {
             e.printStackTrace();
         }
-        return lines;
+        return lines-1;
     }
 
     public Client[] readClient() {
@@ -39,6 +39,8 @@ public class ReadCSV {
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(BASE_PATH + "client.csv"));) {
             int size = getNumberOfLines("client.csv");
             clients = new Client[size];
+
+            String headers = bufferedReader.readLine();
 
             String line;
             while((line = bufferedReader.readLine()) != null) {
@@ -80,6 +82,8 @@ public class ReadCSV {
             int size = getNumberOfLines("car.csv");
             cars = new Car[size];
 
+            String headers = bufferedReader.readLine();
+
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 String[] words = line.split("[,.:;!?]+");
@@ -114,6 +118,8 @@ public class ReadCSV {
 
             int size = getNumberOfLines("carModel.csv");
             carModels = new CarModel[size];
+
+            String headers = bufferedReader.readLine();
 
             String line;
             while ((line = bufferedReader.readLine()) != null) {

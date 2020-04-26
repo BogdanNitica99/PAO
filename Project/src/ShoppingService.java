@@ -25,7 +25,7 @@ public class ShoppingService {
         System.out.println("My cart: ");
         Car[] carsInCart = shoppingCart.listShoppingCart();
         for (int i=0;(i<carsInCart.length) && (carsInCart[i] != null);i++) {
-            System.out.println(carsInCart[i]);
+            System.out.println(carsInCart[i].writeToCSV());
         }
 
         logCSV.writeLog("Show cars in Cart for " + shoppingCart.getClient().getName());
@@ -50,7 +50,7 @@ public class ShoppingService {
         System.out.println("Cars in Store");
         Car[] cars = store.listStoreCars();
         for (int i=0;(i<cars.length)  && (cars[i] != null);i++) {
-            System.out.println(cars[i]);
+            System.out.println(cars[i].writeToCSV());
         }
 
         logCSV.writeLog("Show cars in Store");

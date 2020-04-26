@@ -37,4 +37,8 @@ public class CarModel {
                 ", type='" + type + '\'' +
                 '}';
     }
+
+    public String writeToCSV() {
+        return name + ' ' + model + ' ' + type;
+    }
 }

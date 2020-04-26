@@ -48,7 +48,7 @@ public class Service {
 
         shoppingService.showCarsInStore(bucharestStore);
 
-        shoppingService.addCarToShoppingCart(client2Cart, shoppingService.getCarFromStore(bucharestStore, 0)); //dubios, nu vrea sa mearga pentru index 2
+        shoppingService.addCarToShoppingCart(client2Cart, shoppingService.getCarFromStore(bucharestStore, 2));
 
         Receipt receiptClient2 = clientService.buyCart(bucharestStore, client2Cart);
 
@@ -56,17 +56,11 @@ public class Service {
             Review reviewClient2 = clientService.giveReview(shoppingService.getCarFromStore(bucharestStore, 0), clients[1], 5, "Too expensive");
             writeCSV.writeReview(reviewClient2);
         }
-        catch (RuntimeException | IOException e){
+        catch (RuntimeException e){
             System.out.println(e);
         }
 
-        try {
-            writeCSV.writeReceipt(receiptClient1);
-            writeCSV.writeReceipt(receiptClient2);
-        }
-        catch (IOException e) {
-            System.out.println(e);
-        }
-
+        writeCSV.writeReceipt(receiptClient1);
+        writeCSV.writeReceipt(receiptClient2);
     }
 }

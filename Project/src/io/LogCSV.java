@@ -19,6 +19,8 @@ public class LogCSV {
 
             if (!file.exists()) {
                 file.createNewFile();
+                FileWriter fw = new FileWriter(file, true);
+                fw.append("Action,Timestamp\n");
             }
 
             FileWriter fw = new FileWriter(file, true);
