@@ -47,13 +47,7 @@ public class WriteCSV {
         fw.flush();
         fw.close();
 
-        //DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        //Date date = new Date();
-        //fw.append(dateFormat.format(date));
     }
-
-    //    private Car[] objectsBought;
-
 
     public void writeReceipt(Receipt receipt) throws IOException {
         File file = new File(BASE_PATH + "receipt.csv");

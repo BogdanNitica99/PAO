@@ -2,8 +2,6 @@ import car.Car;
 import client.Client;
 import io.LogCSV;
 
-import java.io.IOException;
-
 public class ShoppingService {
 
     LogCSV logCSV = new LogCSV();

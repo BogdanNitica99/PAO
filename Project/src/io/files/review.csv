@@ -6,3 +6,4 @@ Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=8100, ho
 Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=8100, horsepower=120, color='Blue'},5,client{name='Elon'},Too expensive
 Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=8100, horsepower=120, color='Blue'},5,client{name='Elon'},Too expensive
 Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=8100, horsepower=120, color='Blue'},5,client{name='Elon'},Too expensive
+Car{model=car.CarModel{name='Dacia', model='Logan', type='Sedan'}, cost=8100, horsepower=120, color='Blue'},5,client{name='Elon'},Too expensive
