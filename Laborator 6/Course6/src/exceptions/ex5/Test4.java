@@ -1,24 +1,21 @@
-package exceptions.ex3;
+package exceptions.ex5;
 
-import java.nio.channels.ScatteringByteChannel;
 import java.util.Arrays;
 
-public class Ex3 {
+public class Test4 {
 
     public static void main(String[] args) {
 
-        try (R2 r1 = new R2("r1"); R2 r2 = new R2("r2"))
-        {
-            System.out.println("In try block");
+        try (R2 r1 = new R2("r1");
+             R2 r2 = new R2("r2")) {
+            // this exception is caught and it suppresses other exceptions (thrown in close() method, for example)
             throw new Exception("exception in try block");
-        }
-        catch( Exception e){
+        } catch (Exception e) {
             System.out.println(e);
-            // suppressed exceotions
+            // suppressed exceptions
             Throwable[] suppressedExceptions = e.getSuppressed();
             System.out.println(Arrays.toString(suppressedExceptions));
-        }
-        finally {
+        } finally {
             System.out.println("finally");
         }
     }

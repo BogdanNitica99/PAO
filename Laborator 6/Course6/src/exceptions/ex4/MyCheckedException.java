@@ -1,4 +1,4 @@
-package exceptions.ex2;
+package exceptions.ex4;
 
 public class MyCheckedException extends Exception {
 
