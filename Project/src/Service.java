@@ -1,11 +1,15 @@
 import car.Car;
+import car.CarModel;
 import client.Client;
+import client.Individual;
+import io.DbServices;
 import io.ReadCSV;
 import io.WriteCSV;
 import services.Receipt;
 import services.Review;
 
 import java.io.IOException;
+import java.util.Arrays;
 
 public class Service {
 
@@ -13,6 +17,11 @@ public class Service {
 
         ReadCSV readCSV = new ReadCSV();
         WriteCSV writeCSV = new WriteCSV();
+
+        GuiService guiService = new GuiService();
+
+        guiService.clientGui();
+        guiService.carGui();
 
         ShoppingService shoppingService = new ShoppingService();
         ClientService clientService = new ClientService();
@@ -53,7 +62,7 @@ public class Service {
         Receipt receiptClient2 = clientService.buyCart(bucharestStore, client2Cart);
 
         try {
-            Review reviewClient2 = clientService.giveReview(shoppingService.getCarFromStore(bucharestStore, 0), clients[1], 5, "Too expensive");
+            Review reviewClient2 = clientService.giveReview(0, 1, 5, "Too expensive");
             writeCSV.writeReview(reviewClient2);
         }
         catch (RuntimeException e){

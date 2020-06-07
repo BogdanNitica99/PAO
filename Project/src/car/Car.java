@@ -4,20 +4,36 @@ import java.util.Objects;
 
 public class Car implements Comparable<Car>{
 
-    private CarModel model;
+    private int carId;
+    private int modelId;
     private int cost;
     private int horsepower;
     private String color;
 
-    public Car(CarModel model, int cost, int horsepower, String color) {
-        this.model = model;
+    public Car(int carId, int modelId, int cost, int horsepower, String color) {
+        this.carId = carId;
+        this.modelId = modelId;
         this.cost = cost;
         this.horsepower = horsepower;
         this.color = color;
     }
 
+    public int getCarId() {return carId;}
+
+    public int getModelId() {
+        return modelId;
+    }
+
     public int getCost() {
-        return this.cost;
+        return cost;
+    }
+
+    public int getHorsepower() {
+        return horsepower;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     @Override
@@ -35,19 +51,19 @@ public class Car implements Comparable<Car>{
         Car car = (Car) o;
         return cost == car.cost &&
                 horsepower == car.horsepower &&
-                model.equals(car.model) &&
+                modelId == car.modelId &&
                 color.equals(car.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(model, cost, horsepower, color);
+        return Objects.hash(modelId, cost, horsepower, color);
     }
 
     @Override
     public String toString() {
         return "Car{" +
-                "model=" + model.toString() +
+                "model=" + modelId +
                 ", cost=" + cost +
                 ", horsepower=" + horsepower +
                 ", color='" + color + '\'' +
@@ -55,6 +71,6 @@ public class Car implements Comparable<Car>{
     }
 
     public String writeToCSV() {
-        return model.writeToCSV() + ' ' + horsepower + ' ' + color;
+        return modelId + ' ' + horsepower + ' ' + color;
     }
 }

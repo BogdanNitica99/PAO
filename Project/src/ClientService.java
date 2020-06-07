@@ -8,10 +8,10 @@ public class ClientService {
 
     LogCSV logCSV = new LogCSV();
 
-    public Review giveReview(Car car, Client client, int stars, String feedback) {
-        Review review = new Review(car, client, stars, feedback);
+    public Review giveReview(int carId, int clientId, int stars, String feedback) {
+        Review review = new Review(carId, clientId, stars, feedback);
 
-        logCSV.writeLog(client.getName() + " left a review for car");
+        logCSV.writeLog(clientId + " left a review for car");
 
         return review;
     }
@@ -52,8 +52,7 @@ public class ClientService {
             store.delete(index);
         }
 
-        receipt = new Receipt(5,carCosts,carsBought,numberOfCars,client,clientDiscount);
-
+        receipt = new Receipt(5,carCosts,carsBought,numberOfCars,0,clientDiscount, "2");
         System.out.println("Your receipt: ");
         System.out.println(receipt.writeNice());
 

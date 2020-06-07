@@ -4,14 +4,30 @@ import java.util.Objects;
 
 public class CarModel {
 
+    private int carModelId;
     private String name;
     private String model;
     private String type;
 
-    public CarModel(String name, String model, String type) {
+    public CarModel(int carModelId, String name, String model, String type) {
+        this.carModelId = carModelId;
         this.name = name;
         this.model = model;
         this.type = type;
+    }
+
+    public int getCarModelId() {return  carModelId;}
+
+    public String getName() {
+        return name;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public String getType() {
+        return type;
     }
 
     @Override

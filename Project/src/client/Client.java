@@ -2,15 +2,19 @@ package client;
 
 public abstract class Client {
 
+    private int id;
     private String name;
     private int money;
     private int nrOfCars;
 
-    public Client(String name, int money, int nrOfCars) {
+    public Client(int id, String name, int money, int nrOfCars) {
+        this.id = id;
         this.name = name;
         this.money = money;
         this.nrOfCars = nrOfCars;
     }
+
+    public int getId() {return id;}
 
     public int getNrOfCars() {
         return nrOfCars;

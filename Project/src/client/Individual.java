@@ -6,8 +6,8 @@ public class Individual extends Client {
 
     private Boolean loyalCustomer;
 
-    public Individual(String name, int money, int nrOfCars) {
-        super(name, money, nrOfCars);
+    public Individual(int id, String name, int money, int nrOfCars) {
+        super(id, name, money, nrOfCars);
         this.loyalCustomer = nrOfCars > 3;
     }
 

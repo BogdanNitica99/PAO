@@ -34,8 +34,8 @@ public class WriteCSV {
 
             FileWriter fw = new FileWriter(file, true);
 
-            String car = review.getCar().writeToCSV();
-            String client = review.getClient().getName();
+            String car = Integer.toString(review.getCarId());
+            String client = Integer.toString(review.getClientId());
             String stars = Integer.toString(review.getStars());
             String feedback = review.getFeedback();
 
@@ -96,7 +96,7 @@ public class WriteCSV {
             fw.append(dateFormat.format(date));
             fw.append(",");
 
-            String client = receipt.getClient().getName();
+            String client = "0";
             fw.append(client);
             fw.append(",");
 

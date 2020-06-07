@@ -53,10 +53,10 @@ public class ReadCSV {
 
                 Client client;
                 if(companyName.equals("null")) {
-                    client = new Individual(name, money, nrOfCars);
+                    client = new Individual(0, name, money, nrOfCars);
                 }
                 else {
-                    client = new LegalEntity(name, money, nrOfCars, companyName);
+                    client = new LegalEntity(0, name, money, nrOfCars, companyName);
                 }
                 clients[index] = client;
                 index += 1;
@@ -92,7 +92,7 @@ public class ReadCSV {
                 String horsepower = words[1];
                 String color = words[2];
 
-                Car car = new Car(carModels[indexModel], Integer.parseInt(cost), Integer.parseInt(horsepower), color);
+                Car car = new Car(0, indexModel, Integer.parseInt(cost), Integer.parseInt(horsepower), color);
                 cars[index] = car;
                 index += 1;
                 count += 1;
@@ -129,7 +129,7 @@ public class ReadCSV {
                 String model = words[1];
                 String type = words[2];
 
-                CarModel carModel = new CarModel(name, model, type);
+                CarModel carModel = new CarModel(0, name, model, type);
                 carModels[index] = carModel;
                 index += 1;
             }

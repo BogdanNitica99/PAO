@@ -6,9 +6,13 @@ public class LegalEntity extends Client {
 
     private String companyName;
 
-    public LegalEntity(String name, int money, int nrOfCars, String companyName) {
-        super(name, money, nrOfCars);
+    public LegalEntity(int id, String name, int money, int nrOfCars, String companyName) {
+        super(id, name, money, nrOfCars);
         this.companyName = companyName;
+    }
+
+    public String getCompanyName() {
+        return companyName;
     }
 
     @Override
